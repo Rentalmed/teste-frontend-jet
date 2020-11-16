@@ -1,0 +1,129 @@
+﻿@model DomainProduct.Result
+
+@if (Model.Products != null && Model.Products.Any())
+{
+    <div class="ui horizontal divider">
+    <a>
+        <p> ÚLTIMOS LANÇAMENTOS </p>
+    </a>
+        </div>
+    @Html.Action("ProductsByGroup","Product", new { id = 4104 }) 
+
+
+    <div class="ui horizontal divider">
+    <a href = https://www.rentalmed.com.br/categoria/eccos-cosmeticos >
+        <p> ECCO´S COMÉTICOS </p>
+    </a>
+        </div>
+    @Html.Action("ProductsByGroup","Product", new { id = 4109 }) 
+
+    
+    @Html.Action("CentralHalfBanner", "Banner")
+
+    <div class="ui horizontal divider">
+    <a href =  >
+        <p> MAIS VENDIDOS RENTALMED </p>
+    </a>
+        </div>
+    @Html.Action("ProductsByGroup","Product", new { id = 4377 }) 
+
+
+    <div class="ui horizontal divider">
+    <a href = https://www.rentalmed.com.br/categoria/estetica/radiofrequencia>
+        <p> EQUIPAMENTOS DE RADIOFREQUÊNCIA </p>
+    </a>
+        </div>
+    @Html.Action("ProductsByGroup","Product", new { id = 4103 }) 
+
+   
+    <div class="ui horizontal divider">
+    <a href = https://www.rentalmed.com.br/categoria/estetica/led-e-laser >
+        <p> AGORA NÓS TEMOS IBRAMED </p>
+    </a>
+        </div>
+    @Html.Action("ProductsByGroup","Product", new { id = 4609 }) 
+
+    <div class="ui container fluid newsletter-bar">
+    <div class="ui container">
+        <div class="ui grid middle aligned">
+            <div class="row stackable">
+                <div class="column">
+                    <div class="ui form">
+                        <div class="inline fields margin none">
+                            <div class="field">
+                                <span>
+                                    <img src="~/assets/image/banners2/Assine.png" />
+                                </span>
+                            </div>
+                            <div class="field textNews">
+                                <span class="text">
+                                    Cadastre seu e-mail e receba novidades e promoções.
+                                </span>
+                            </div>
+                            <div class="field">
+                                <div class="ui left icon input">
+                                    <i class="mail icon"></i>
+                                    <input type="text" placeholder="seu@email.com.br" id="email_news">
+                                </div>
+                            </div>
+                            <div class="field">
+                                <button class="ui button red" id="btn_news">
+                                    Cadastrar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="ui horizontal divider">
+    <a href = https://www.rentalmed.com.br/categoria/estetica/led-e-laser >
+        <p> EQUIPAMENTOS LED E LASER </p>
+    </a>
+        </div>
+    @Html.Action("ProductsByGroup","Product", new { id = 4107 }) 
+
+    <div class="ui horizontal divider">
+    <a href = https://www.rentalmed.com.br/categoria/estetica/estetica-intima >
+        <p> ESTÉTICA ÍNTIMA </p>
+    </a>
+        </div>
+    @Html.Action("ProductsByGroup","Product", new { id = 4173 }) 
+
+
+    <div class="four-banner">
+        <a href="https://www.rentalmed.com.br/produto/desintoxi-cha-60-saches-eccos-cosmeticos/3329751" class="b-four-banner">
+            <img src="~/assets/image/banners2/fourbanner1.png" />
+        </a>
+        <a href="https://www.rentalmed.com.br/produto/biosept-home-desinfeccao-por-luz-uv-c/3295260" class="b-four-banner">
+            <img src="~/assets/image/banners2/fourbanner2.png" />
+        </a>
+        <a href="https://www.papodeestetica.com.br/" class="b-four-banner">
+            <img src="~/assets/image/banners2/fourbanner3.png" />
+        </a>
+         <a href="https://www.rentalmed.com.br/hotsite/locacao" class="b-four-banner">
+            <img src="~/assets/image/banners2/fourbanner4.png" />
+        </a>
+    </div>
+    
+
+     <div class="ui horizontal divider">
+    <a href = https://www.rentalmed.com.br/marca/cecbra >
+        <p> CecBra CHEGOU NA RENTALMED </p>
+    </a>
+        </div>
+    @Html.Action("ProductsByGroup","Product", new { id = 4106 })     
+
+    <div class="ui horizontal divider">
+    <a href= https://www.rentalmed.com.br/categoria/cursos-e-eventos >
+        <p> CURSOS E EVENTOS RENTALMED </p>
+    </a>
+        </div>
+    @Html.Action("ProductsByGroup","Product", new { id = 4110 })    
+    
+
+}
+

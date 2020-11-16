@@ -1,0 +1,39 @@
+@{
+    ViewBag.Title = string.IsNullOrEmpty(LojaCorp.Control.Company._Company.Title) ? LojaCorp.Control.Company._Company.NameStore : LojaCorp.Control.Company._Company.Title;
+    Layout = "~/Views/Shared/Base/_Layout.cshtml";
+}
+
+<div class="banner-adaptado-mobile"> 
+ <ul class="slider-mobile" class="banner-adaptado-mobile">
+     <li>
+           <input type="radio" id="slide-mobile1" name="slide-mobile" checked>
+           <label for="slide-mobile1"></label>
+           <img src="~/assets/image/banners2/outubro_rosa_mobile.png" />
+     </li>
+
+     <li>
+           <input type="radio" id="slide-mobile2" name="slide-mobile" checked>
+           <label for="slide-mobile2"></label> 
+           <img src="~/assets/image/banners2/Banner_cursos.png" />
+     </li>
+
+     <li>
+           <input type="radio" id="slide-mobile3" name="slide-mobile" checked>
+           <label for="slide-mobile3"></label> 
+           <img src="~/assets/image/banners2/Banner_monte_sua_clinica.png" />
+     </li>
+
+     <li>
+           <input type="radio" id="slide-mobile4" name="slide-mobile" checked>
+           <label for="slide-mobile4"></label>         
+           <img src="~/assets/image/banners2/Banner_ozonio.png" />
+     </li>
+
+     <li>
+           <input type="radio" id="slide-mobile5" name="slide-mobile" checked>
+           <label for="slide-mobile5"></label>         
+           <img src="~/assets/image/banners2/banner_eccos.png" />
+     </li>
+
+ </ul>
+ </div>

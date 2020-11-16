@@ -1,0 +1,12 @@
+@{
+    ViewBag.Title = string.IsNullOrEmpty(LojaCorp.Control.Company._Company.Title) ? LojaCorp.Control.Company._Company.NameStore : LojaCorp.Control.Company._Company.Title;
+    Layout = "~/Views/Shared/Base/_Layout.cshtml";
+}
+
+<!-- ~/Views/Shared/Blocks/Group/_Groups.cshtml -->
+@Html.Action("Group", "Group")
+
+<div class="featuredProducts">
+    <!-- ~/Views/Shared/Blocks/Product/_FeaturedProducts.cshtml -->
+    @Html.Action("FeaturedProducts", "Product")
+</div>

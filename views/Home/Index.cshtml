@@ -1,0 +1,133 @@
+﻿
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/5d56d85e77aa790be32f3e3f/default';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+
+<script type="text/javascript" async src="https://d335luupugsy2.cloudfront.net/js/loader-scripts/f8d71ea1-0776-41b1-963a-d3a4259fd35b-loader.js" ></script>
+
+<link rel="shortcut icon" href="rentalmed.com.br/favicon.ico" type="image/x-icon"/>
+
+@{
+    ViewBag.Title = string.IsNullOrEmpty(LojaCorp.Control.Company._Company.Title) ? LojaCorp.Control.Company._Company.NameStore : LojaCorp.Control.Company._Company.Title;
+    Layout = "~/Views/Shared/Base/_Layout.cshtml";
+}
+
+<!-- ~/Views/Shared/Blocks/Banner/_FullBanner.cshtml -->
+@Html.Action("FullBanner", "Banner")
+
+<div class="banner-adaptado-mobile"> 
+ <ul class="slider-mobile" class="banner-adaptado-mobile">
+     <li>
+           <input type="radio" id="slide-mobile1" name="slide-mobile" checked>
+           <label for="slide-mobile1"></label>
+           <img src="~/assets/image/banners2/Full banner mobile 1.png" /> 
+
+     <li>
+           <input type="radio" id="slide-mobile2" name="slide-mobile" checked>
+           <label for="slide-mobile2"></label> 
+           <img src="~/assets/image/banners2/Full banner mobile 2.png" />
+     </li>
+
+     <li>
+           <input type="radio" id="slide-mobile3" name="slide-mobile" checked>
+           <label for="slide-mobile3"></label> 
+           <img src="~/assets/image/banners2/Full banner mobile 3.png" />
+     </li>
+
+     <li>
+           <input type="radio" id="slide-mobile4" name="slide-mobile" checked>
+           <label for="slide-mobile4"></label>         
+           <img src="~/assets/image/banners2/Full banner mobile 2.png" />
+     </li>
+
+     <li>
+           <input type="radio" id="slide-mobile5" name="slide-mobile" checked>
+           <label for="slide-mobile5"></label>         
+           <img src="~/assets/image/banners2/Full banner mobile 1.png" />
+     </li>
+ </ul>
+</div>
+
+<div class="three-banner">
+    <a href="https://www.rentalmed.com.br/marca/ibramed" class="b-three-banner">
+        <img src="~/assets/image/banners/Three Banner DGM.png" />
+    </a>
+    <a href="https://www.rentalmed.com.br/marca/dgm" class="b-three-banner">
+        <img src="~/assets/image/banners/Three Banner Ibramed.png" />
+    </a>
+    <a href="https://www.rentalmed.com.br/marca/tonederm" class="b-three-banner">
+        <img src="~/assets/image/banners/Three Banner Tonederm.png" />
+    </a>
+</div>
+
+<div class="categorias">
+
+    </a>
+    <a href="https://www.rentalmed.com.br/produto/herus-hifu-acompanha-03-cartuchos-faciais-fismatek/3217173" class="b-categorias-banner">
+        <img src="~/assets/image/banners/Herus Hifu.png" />
+        <p> HERUS HIFU </p>
+    </a>
+
+    <a href="" class="b-categorias-banner">
+        <img src="~/assets/image/banners/Polarys.png" />
+         <p> POLARYS </p>
+    </a>
+
+    <a href="https://www.rentalmed.com.br/produto/thoor-dgm-showroom/3256709" class="b-categorias-banner">
+        <img src="~/assets/image/banners/Polarys.png" />
+        <p> THOOR </p>
+    </a>
+
+     <a href="https://www.rentalmed.com.br/produto/maxiflash-bioset-luz-intensa-pulsada/3218361" class="b-categorias-banner">
+        <img src="~/assets/image/banners/Maxiflash.png" />
+        <p> MAXI FLASH </p>
+    </a>
+
+      <a href="https://www.rentalmed.com.br/produto/galaxy-fiber-laser-de-diodo-por-fibra/3097575" class="b-categorias-banner">
+        <img src="~/assets/image/banners/Epilação a Laser(Fiber).png" />
+        <p> EPILAÇÃO A LASER </p>
+    </a>
+
+    <a href="https://www.rentalmed.com.br/categoria/estetica/jato-de-plasma" class="b-categorias-banner">
+        <img src="~/assets/image/banners/Plasma.png" />
+        <p> PLASMA </p>
+    </a>
+
+    <a href="https://www.rentalmed.com.br/produto/criodermis-medical-san/3266526" class="b-categorias-banner">
+        <img src="~/assets/image/banners/Criodermis.png" />
+        <p> CRIODERMIS </p>
+    </a>
+
+</div>
+
+<!-- ~/Views/Shared/Blocks/_InfoBar.cshtml -->
+@Html.Partial("Blocks/_InfoBar")
+
+
+<div class="featuredProducts">
+    <!-- ~/Views/Shared/Blocks/Product/_FeaturedProducts.cshtml -->
+    @Html.Action("FeaturedProducts", "Product")
+</div>
+
+
+<!-- ~/Views/Shared/Blocks/Group/_Groups.cshtml -->
+@Html.Action("Group", "Group")
+
+<!-- ~/Views/Shared/Blocks/_TopSellers.cshtml -->
+
+
+<!-- ~/Views/Shared/Blocks/Banner/_FooterHalfBanner.cshtml -->
+@Html.Action("FooterHalfBanner", "Banner")
+
+<!-- ~/Views/Shared/Blocks/Brand/_Brands.cshtml -->
+@Html.Action("Brand", "Product")

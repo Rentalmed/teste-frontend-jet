@@ -1,0 +1,57 @@
+@{
+    ViewBag.Title = string.IsNullOrEmpty(LojaCorp.Control.Company._Company.Title) ? LojaCorp.Control.Company._Company.NameStore : LojaCorp.Control.Company._Company.Title;
+    Layout = "~/Views/Shared/Base/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>--Formulário Contato--</title>
+<meta charset="utf-8" />
+</head>
+
+<body>
+
+<div class="container">
+@Html.Partial("Common/_CommonJS")
+    <div class="row">
+        <div class="col-12">
+            <div class="col-6" style="display: inline-block;">
+                <form style="display: grid;
+                width: 500px;
+                color: #FFF;"
+                id="form-certificacao">
+                    <h1>Entre em contato</h1>
+                        <label for="nome">Nome</label>
+                        <input style="margin-bottom:8px;"type="text" onchange="showFields(nomeid, fieldName)" value="" id="nomeid" placeholder="Informe seu Nome" required="required" name="name" />
+                        
+                        <label for="phone">Telefone</label>
+                        <input style="margin-bottom:8px;" type="text" id="foneid" onchange="showFields(foneid, fieldPhone)" placeholder="(xx)xx-xx-xx-xx" required="required" name="phone" />
+                        
+                        <label for="email">E-mail</label>
+                        <input style="margin-bottom:8px;" type="email" id="emailid" onchange="showFields(emailid, fieldEmail)" placeholder="Informe seu e-email" required="required" name="email" />
+                        
+                        <label for="subject">Assunto</label>
+                        <input style="margin-bottom:8px;" type="text" id="assuntoid" onchange="showFields(assuntoid, fieldSubject)" placeholder="Digite o assunto" required="required" name="subject" />
+                        
+                        <textarea rows="12" style="margin-bottom:8px;" placeholder="Mensagem" onchange="showFields(message)" ></textarea>
+
+                        <input type="submit" class="enviar" onclick="EnviarCertificacao();" value="Enviar" />
+                </form>
+            </div>
+            <div class="col-6" style= "background-color: #FFF;
+                height: 200px;
+                display: inline-block;
+                width: 500px;">
+                <h1>Dados</h1>
+                <p id="fieldName">Nome:</p>
+                <p id="fieldPhone">Telefone:</p>
+                <p id="fieldEmail">E-mail:</p>
+                <p id="fieldSubject">Assunto:</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
