@@ -1,17 +1,34 @@
-﻿<!-- Start -->
+<!-- Start -->
 <script src="~/assets/js/manifest.js"></script>
 <script src="~/assets/js/vendor.js?v1"></script>
 <script src="~/assets/js/app.js?v1"></script>
 
 
 
-
-
 <!--GLOBAL-->
 <script type="text/javascript">
+
     $(document).ready(function () {
         updateQuantidadeTopoCarrinho();
+        breakPointsLocation();
+        detailTruncate();
+        getDataForm();
+       
     })
+
+
+    function getDataForm() {
+        var form = JSON.parse(sessionStorage.getItem("form"));
+
+        if (form != "undefined" && form != null) {
+            document.getElementById("nomeid").value = form.nome;
+            document.getElementById("foneid").value = form.fone;
+            document.getElementById("emailid").value = form.email;
+            document.getElementById("assuntoid").value = form.assunto;
+        }
+        
+    }
+
 
     function updateQuantidadeTopoCarrinho() {
         $.ajax({
@@ -34,13 +51,94 @@
              });
     }
 
-    function EnviarCertificacao() {
-        var dataForm = $("#form-certificacao").serialize();
-        sessionStorage.setItem('form', dataForm);
+   function EnviarCertificacao() {
+    
+        var fieldsValue = {
+            nome: document.getElementById("nomeid").value,
+            fone: document.getElementById("foneid").value,
+            email: document.getElementById("emailid").value,
+            assunto: document.getElementById("assuntoid").value,
+            message: document.getElementById("messageid").value,
+        };
+            
+        
+        sessionStorage.setItem('form', JSON.stringify(fieldsValue));
     }
 
-     function showFields(el, fieldTarget) {        
+    function showFields(el, fieldTarget, ref) {        
         var fieldValue = $(el).val();
-        $(fieldTarget).append(fieldValue);
+
+        if ($(fieldTarget).length < 1 ) {
+            $(fieldTarget).append(fieldValue);
+           
+        } else if ($(fieldTarget).length >= 1) {
+            $(fieldTarget).html(ref + " ");
+            $(fieldTarget).append(fieldValue); 
+            
+        } else {           
+            $(fieldTarget).append(fieldValue);
+        }
+        
+    }
+
+    function breakPointsLocation(){
+        
+        const screen = $("body").width()
+
+        if(screen < 500){
+            $(".column-itens").addClass(["two", "column"]);
+            $("#location-product-info-primary").addClass("location-product-info-primary-align");
+        }
+        if(screen >= 500 && screen < 769){
+            $(".column-itens").addClass(["three", "column"]);
+        }
+        if(screen >= 769 && screen < 1118){
+            $(".column-itens").addClass(["four", "column"]);
+        }
+        if(screen >= 1118){
+            $(".column-itens").addClass(["seven", "column"]);
+        }
+    }
+
+    function detailTruncate(){
+
+        var showChar = 400;
+        var ellipsestext = "...";
+
+        $(".product-detail-truncate").each(function() {
+            var content = $(this).html();
+
+
+            if (content.length > showChar) {
+
+                var c = content.substr(0, showChar);
+                var h = content;
+                var html =
+                '<div class="truncate-text" style="display:block">' +
+                c +
+                '<span class="moreellipses">' +
+                ellipsestext +
+                '&nbsp;&nbsp; <a class="moreless more" style="cursor:pointer"> + detalhes </a></span></span></div><div class="truncate-text" style="display:none">' +
+                h +
+                '<a class="moreless less" style="cursor:pointer">- detalhes</a></span></div>';
+
+                $(this).html(html);
+            }
+
+            $(".moreless").click(function() {
+                var thisEl = $(this);
+                var cT = thisEl.closest(".truncate-text");
+                var tX = ".truncate-text";
+
+                if (thisEl.hasClass("less")) {
+                    cT.prev(tX).toggle();
+                    cT.slideToggle();
+                } else {
+                    cT.toggle();
+                    cT.next(tX).fadeToggle();
+                }
+                return false;
+            });            
+        });
     }
 </script>
