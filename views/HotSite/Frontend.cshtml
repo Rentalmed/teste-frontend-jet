@@ -9,6 +9,8 @@
 <head>
 <title>--Formulário Contato--</title>
 <meta charset="utf-8" />
+<!--   <link href="ContatoEstilo.css" rel="stylesheet" media="all" />
+    <script src="JavaScript1.js"></script>-->
 </head>
 
 <body>
@@ -20,24 +22,23 @@
             <div class="col-6" style="display: inline-block;">
                 <form style="display: grid;
                 width: 500px;
-                color: #FFF;"
-                id="form-certificacao">
+                color: #FFF;">
                     <h1>Entre em contato</h1>
                         <label for="nome">Nome</label>
-                        <input style="margin-bottom:8px;"type="text" onchange="showFields(nomeid, fieldName)" value="" id="nomeid" placeholder="Informe seu Nome" required="required" name="name" />
+                        <input style="margin-bottom:8px;"type="text" onchange="showFields(nomeid, fieldName, 'Nome:')" value="" id="nomeid" placeholder="Informe seu Nome" required="required" name="name" />
                         
                         <label for="phone">Telefone</label>
-                        <input style="margin-bottom:8px;" type="text" id="foneid" onchange="showFields(foneid, fieldPhone)" placeholder="(xx)xx-xx-xx-xx" required="required" name="phone" />
+                        <input style="margin-bottom:8px;" type="text" id="foneid" onchange="showFields(foneid, fieldPhone, 'Telefone:')" placeholder="(xx)xx-xx-xx-xx" required="required" name="phone" />
                         
                         <label for="email">E-mail</label>
-                        <input style="margin-bottom:8px;" type="email" id="emailid" onchange="showFields(emailid, fieldEmail)" placeholder="Informe seu e-email" required="required" name="email" />
+                        <input style="margin-bottom:8px;" type="email" id="emailid" onchange="showFields(emailid, fieldEmail, 'E-mail:')" placeholder="Informe seu e-email" required="required" name="email" />
                         
                         <label for="subject">Assunto</label>
-                        <input style="margin-bottom:8px;" type="text" id="assuntoid" onchange="showFields(assuntoid, fieldSubject)" placeholder="Digite o assunto" required="required" name="subject" />
+                        <input style="margin-bottom:8px;" type="text" id="assuntoid" onchange="showFields(assuntoid, fieldSubject, 'Assunto:')" placeholder="Digite o assunto" required="required" name="subject" />
                         
-                        <textarea rows="12" style="margin-bottom:8px;" placeholder="Mensagem" onchange="showFields(message)" ></textarea>
+                        <textarea rows="12" style="margin-bottom:8px;" id="messageid" placeholder="Mensagem" onchange="showFields(message)" ></textarea>
 
-                        <input type="submit" class="enviar" onclick="EnviarCertificacao();" value="Enviar" />
+                        <input  class="enviar" onclick="EnviarCertificacao();" value="Enviar" />
                 </form>
             </div>
             <div class="col-6" style= "background-color: #FFF;
